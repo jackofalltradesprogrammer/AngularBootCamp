@@ -6,11 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  n1:number;
+  name:string;
   msg:string;
-  calcSquare(){
-    this.msg = `Square of ${this.n1} is ${this.n1*this.n1}`;
-    
+  terms: boolean;
+ showGender(gender){
+   if(this.terms && this.name){
+    if (gender == "male")
+      this.msg = "Hello Mr. " + this.name;
+    else if (gender == "female")
+      this.msg = "Hello Mrs. " + this.name;
+   }
+   else
+    this.msg = "Please accept terms and input a name";
 
   }
   
