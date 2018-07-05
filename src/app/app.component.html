@@ -1,11 +1,9 @@
-<h2>Working with radio button</h2>
+<h2>DropDownList, Example-1</h2>
 
-Select Gender: <br>
-
-<input type="radio" name="gender" value='Mr.' [(ngModel)]='gender'> Male
-<input type="radio" name="gender" value='Miss. ' [(ngModel)]='gender'> Female
-<br>
-{{'Hello ' + gender}}
-<br>
-<input type="checkbox" [(ngModel)]='terms'> Terms and Conditions <br>
-{{terms}}
+Choose direction: 
+<select [(ngModel)]='direction'>
+  <option value="North">North</option>
+  <option value="East">East</option>
+  <option value="West">West</option>
+  <option value="South">South</option>
+</select> {{direction}}
