@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  msg:string='';
+  getMessage(){
+    this.msg='hello';
+  }
+  getDate(){
+    var d= new Date();
+    this.msg = d.getDate() +"/"+(d.getMonth()) + "/" + d.getFullYear();
+
+  }
 }
