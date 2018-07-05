@@ -1,22 +1,9 @@
 <h2> Structural Directives </h2>
 
-Enter direction: <input type="text" [(ngModel)]="direction"> <br>
-
-<div  [ngSwitch]="direction">
-<p *ngSwitchCase="'north'">
-  North
-</p>
-<p *ngSwitchCase="'east'">
-  East
-</p>
-<p *ngSwitchCase="'west'">
-  West
-</p>
-<p *ngSwitchCase="'south'">
-  South
-</p>
-<p *ngSwitchDefault>
-Lost
-</p>
-</div>
+<h2> List of Items</h2>
+<ol>
+  <li *ngFor='let item of items'>
+    {{item}}
+  </li>
+</ol>
 
