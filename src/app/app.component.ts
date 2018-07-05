@@ -6,17 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  msg:string='';
-  getSomething(something){
-    var d= new Date();
-    if (something == 'date'){
-      this.msg = d.getDate() +"/"+(d.getMonth()) + "/" + d.getFullYear();
-    }
-    else if (something == 'time') {
-      this.msg = d.getHours() +":"+(d.getMinutes()) + ":" + d.getSeconds();
-    }
-    else{
-      this.msg='hello'; }
+  t1:string;
+  msg:string;
+  display(name){
+    
+    var names = this.t1.split(" ");
+    if(name == "firstName")
+    this.msg  = 'Hello ' + names[0];
+    else if (name == "lastName")
+    this.msg  = 'Hello ' + names[1];
+    else
+    this.msg  = 'Hello ' + this.t1;
+
   }
   
 }
