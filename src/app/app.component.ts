@@ -7,12 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   msg:string='';
-  getMessage(){
-    this.msg='hello';
-  }
-  getDate(){
+  getSomething(something){
     var d= new Date();
-    this.msg = d.getDate() +"/"+(d.getMonth()) + "/" + d.getFullYear();
-
+    if (something == 'date'){
+      this.msg = d.getDate() +"/"+(d.getMonth()) + "/" + d.getFullYear();
+    }
+    else if (something == 'time') {
+      this.msg = d.getHours() +":"+(d.getMinutes()) + ":" + d.getSeconds();
+    }
+    else{
+      this.msg='hello'; }
   }
+  
 }
