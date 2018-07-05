@@ -1,10 +1,22 @@
 <h2> Structural Directives </h2>
 
-<input type="checkbox" [(ngModel)]='x'> True <br>
-<div *ngIf='x else y'>
-  <p>True Block</p>
+Enter direction: <input type="text" [(ngModel)]="direction"> <br>
+
+<div  [ngSwitch]="direction">
+<p *ngSwitchCase="'north'">
+  North
+</p>
+<p *ngSwitchCase="'east'">
+  East
+</p>
+<p *ngSwitchCase="'west'">
+  West
+</p>
+<p *ngSwitchCase="'south'">
+  South
+</p>
+<p *ngSwitchDefault>
+Lost
+</p>
 </div>
 
-<ng-template #y>
-  <p>False Block</p>
-</ng-template>
