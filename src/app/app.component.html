@@ -1,9 +1,11 @@
 <h2> Structural Directives </h2>
-
-<h2> List of Items</h2>
+<button (click)='display("fruits")'>Fruits</button>
+<button (click)='display("vegetables")'>Vegetables</button>
+<h2> {{title}}</h2>
 <ol>
   <li *ngFor='let item of items'>
     {{item}}
   </li>
 </ol>
+{{msg}}
 
