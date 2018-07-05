@@ -1,25 +1,7 @@
-<h2>Event Binding, Multiple choice questions</h2>
+<h2> Structural Directives </h2>
 
-Enter name:
-<input type="text" [(ngModel)]='name' /> <br>
-How many hours in a day? <br> 
-<input type="radio" name="answer1" value="24" [(ngModel)]='answers[0]' > 24
-<input type="radio" name="answer1" value="23" [(ngModel)]='answers[0]' > 23 
-<input type="radio" name="answer1" value="26" [(ngModel)]='answers[0]' > 26
-<input type="radio" name="answer1" value="25" [(ngModel)]='answers[0]' > 25<br>
-
-How many days in a week: 
-<input type="radio" name="answer2" value="6" [(ngModel)]='answers[1]' > 6
-<input type="radio" name="answer2" value="7" [(ngModel)]='answers[1]' > 7 
-<input type="radio" name="answer2" value="8" [(ngModel)]='answers[1]' > 8
-<input type="radio" name="answer2" value="10" [(ngModel)]='answers[1]' > 10 <br>
-
-How many days in a year: 
-<input type="radio" name="answer3" value="6" [(ngModel)]='answers[2]' > 400
-<input type="radio" name="answer3" value="7" [(ngModel)]='answers[2]' > 360
-<input type="radio" name="answer3" value="8" [(ngModel)]='answers[2]' > 365
-<input type="radio" name="answer3" value="10" [(ngModel)]='answers[2]' >370 <br>
-
-
-<button (click)='showScore()'>Submit</button> <br>
-{{msg}}
+<input type ="checkbox" [(ngModel)]='p1'>
+Show Paragraph <br>
+<div *ngIf='p1'>
+  <p>This a paragraph</p>
+</div>
