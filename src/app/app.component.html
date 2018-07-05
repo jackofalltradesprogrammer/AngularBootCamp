@@ -1,9 +1,5 @@
-<h2>DropDownList, Example-1</h2>
+<h2>Event Binding, Example-1</h2>
 
-Choose direction: 
-<select [(ngModel)]='direction'>
-  <option value="North">North</option>
-  <option value="East">East</option>
-  <option value="West">West</option>
-  <option value="South">South</option>
-</select> {{direction}}
+<button (click)='msg="Hello"'>SayHello </button> <br>
+<button (click)='msg=""'>Clear </button> <br>
+{{msg}}
