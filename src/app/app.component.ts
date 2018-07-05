@@ -6,18 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name:string;
+  solution: number[] = [24,7,365];
   msg:string;
-  terms: boolean;
- showGender(gender){
-   if(this.terms && this.name){
-    if (gender == "male")
-      this.msg = "Hello Mr. " + this.name;
-    else if (gender == "female")
-      this.msg = "Hello Mrs. " + this.name;
-   }
+  answers: number[] = [0,0,0];
+  score:number = 0;
+  name:string;
+ showScore(){
+   if (this.answers[0] == this.solution[0])
+   this.score+=1;
+   if (this.answers[1] == this.solution[1])
+   this.score+=1;
+   if (this.answers[2] == this.solution[2])
+   this.score+=1;
+
+   if (this.score == 3)
+    this.msg = "Passed! " + this.name + "'syour score is " + this.score;
    else
-    this.msg = "Please accept terms and input a name";
+   this.msg = "Failed! " + this.name + "'s your score is " + this.score;
+
+
+    
 
   }
   
