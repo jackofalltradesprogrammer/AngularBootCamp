@@ -6,17 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  t1:string;
+  n1:number;
   msg:string;
-  display(name){
+  calcSquare(){
+    this.msg = `Square of ${this.n1} is ${this.n1*this.n1}`;
     
-    var names = this.t1.split(" ");
-    if(name == "firstName")
-    this.msg  = 'Hello ' + names[0];
-    else if (name == "lastName")
-    this.msg  = 'Hello ' + names[1];
-    else
-    this.msg  = 'Hello ' + this.t1;
 
   }
   
