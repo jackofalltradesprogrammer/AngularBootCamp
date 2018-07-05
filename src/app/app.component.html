@@ -1,7 +1,9 @@
 <h2> Structural Directives </h2>
 
-<input type ="checkbox" [(ngModel)]='p1'>
-Show Paragraph <br>
-<div *ngIf='p1'>
-  <p>This a paragraph</p>
+<input type="checkbox" [(ngModel)]='show'>show
+<div *ngIf='show'>
+  ID: {{e.id}} <br>
+  Ename: {{e.ename}} <br>
+  Job: {{e.job}} <br>
+  Salary: {{e.salary}} <br>
 </div>
