@@ -1,4 +1,11 @@
-<h2> Associate html control to a label</h2>
+<h2>Working with radio button</h2>
 
-<label for="t1"> First Name: </label> <input type="text" id="t1"> <br>
-<label for="t2"> Last Name: </label> <input type="text" id="t2"> <br>
+Select Gender: <br>
+
+<input type="radio" name="gender" value='Mr.' [(ngModel)]='gender'> Male
+<input type="radio" name="gender" value='Miss. ' [(ngModel)]='gender'> Female
+<br>
+{{'Hello ' + gender}}
+<br>
+<input type="checkbox" [(ngModel)]='terms'> Terms and Conditions <br>
+{{terms}}
