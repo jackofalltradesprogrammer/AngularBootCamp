@@ -1,31 +1,28 @@
 <h2>Single Page Applications</h2>
-<h3>List of Employees</h3>
+<h3>Employee Record Navigation</h3>
 
-
-<table border="1" *ngIf="employees">
+<table border="1">
   <tr>
-    <th>Index</th>
-    <th>Id</th>
-    <th>Ename</th>
-    <th>Job</th>
-    <th>Salary</th>
-    <th>Operations</th>
+    <th>ID</th>
+    <td>{{x.id}}</td>
+    <td><button (click)='firstRow()'>First</button></td>
   </tr>
-  <tr *ngFor = 'let e of employees; let i = index'>
-    <td>{{i}}</td>
-    <td>{{e.id}}</td>
-    <td>{{e.ename}}</td>
-    <td>{{e.job}}</td>
-    <td>{{e.salary}}</td>
-    <td><button (click)='selectRow(i)'>Select</button></td>
+  <tr>
+      <th>Ename</th>
+      <td>{{x.ename}}</td>
+      <td><button (click)='nextRow()'>Next</button></td>
   </tr>
+  <tr>
+      <th>Job</th>
+      <td>{{x.job}}</td>
+      <td><button (click)='prevRow()'>Previous</button></td>
+  </tr>
+  <tr>
+      <th>Salary</th>
+      <td>{{x.salary}}</td>
+      <td><button (click)='lastRow()'>Last</button></td>
+  </tr>
+
 </table>
-<hr>
-<div *ngIf="x">
-  <h2>Selected Row details</h2>
-  ID: {{x.id}} <br>
-  Ename: {{x.ename}} <br>
-  Job: {{x.job}} <br>
-  Salary: {{x.salary}} <hr>
-  <button (click)='x=null'>Clear all Fields</button>
-</div>
+
+
