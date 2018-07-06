@@ -6,21 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title:string;
-  items: String[] =[];
-  msg: string;
-  display(p){
-    if(p=="fruits"){
-      this.items = ['grapes', 'mango', 'apple','strawberry', 'blueberry'];
-      this.title = ' List of Vegetables'
-      this.msg = 'Count of Vegetables ' + this.items.length;
-    }
-    else if (p=="vegetables"){
-      this.items = ['potato', 'turnip', 'carrot', 'radish', 'brocolli'];
-      this.title = ' List of Fruits'
-      this.msg = 'Count of Fruits: ' + this.items.length;
-    }
-    
+  employees: any[]=null;
+  getEmployees(){
+    this.employees = [
+      {id:101, ename:'kiran', job:'Trainer', salary:5000},
+      {id:101, ename:'Suhal', job:'Programmer', salary:5000},
+      {id:101, ename:'Pavan', job:'Developer', salary:5000},
+      {id:101, ename:'Jassy', job:'Trainer', salary:5000}
+    ];
   }
-    
+  clearEmployees(){
+    this.employees =null;
+  }
 }

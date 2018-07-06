@@ -1,11 +1,18 @@
-<h2> Structural Directives </h2>
-<button (click)='display("fruits")'>Fruits</button>
-<button (click)='display("vegetables")'>Vegetables</button>
-<h2> {{title}}</h2>
-<ol>
-  <li *ngFor='let item of items'>
-    {{item}}
-  </li>
-</ol>
-{{msg}}
+<h2>List of Employees</h2>
 
+<button (click)='getEmployees()'>Show Employees</button>
+<button (click)='clearEmployees()'>Clear Employees</button>
+<table border="1" *ngIf="employees">
+  <tr>
+    <th>ID</th>
+    <th>Ename</th>
+    <th>Job</th>
+    <th>Salary</th>
+  </tr>
+  <tr *ngFor = 'let e of employees'>
+    <td>{{e.id}}</td>
+    <td>{{e.ename}}</td>
+    <td>{{e.job}}</td>
+    <td>{{e.salary}}</td>
+  </tr>
+</table>
