@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { IEmployee, Employee } from './Employee';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -48,23 +50,3 @@ export class AppComponent {
   
 }
 
-interface IEmployee {
-  id:number;
-  ename:string;
-  job:string;
-  salary:number;
-}
-class Employee implements IEmployee {
-  id:number;
-  ename:string;
-  job:string;
-  salary:number;
-  
-  constructor(id?:number, ename?:string, job?:string, salary?:number){
-    this.id=id;
-    this.ename=ename;
-    this.job=job;
-    this.salary=salary;
-  }
-
-}
