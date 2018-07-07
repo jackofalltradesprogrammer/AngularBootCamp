@@ -17,15 +17,19 @@
     <td>{{e.ename}}</td>
     <td>{{e.job}}</td>
     <td>{{e.salary}}</td>
-    <td><button (click)='selectRow(i)'>Select</button></td>
+    <td><button (click)='selectRow(i)'>Select</button>
+      <button (click)='deleteRow(i)'>Delete</button></td>
   </tr>
 </table>
+{{msg}}
 <hr>
-<div *ngIf="x">
+<div>
   <h2>Selected Row details with cloning</h2>
   ID: <input type="number" [(ngModel)]='x.id'> <br>
   Ename: <input type="text" [(ngModel)]='x.ename'> <br>
   Job: <input type="text" [(ngModel)]='x.job'> <br>
   Salary: <input type="number" [(ngModel)]='x.salary'> <br>
-  <button (click)='x=null'>Clear all Fields</button>
+  <button (click)='x={}'>Clear all Fields</button>
+  <button (click)='addRow()'>Add Row</button>
+  <button (click)='editRow(x.id)'>Update Row</button>
 </div>
