@@ -16,12 +16,17 @@ export class PersonListComponent implements OnInit {
       {id:1003, pname:'Maria', gender:'female', age:50 },
       {id:1004, pname:'David', gender:'male', age:16 }
     );
-    // this.personList = [
-    //   {id:1001, pname:'Harpreet', gender:'male', age:28 },
-    //   {id:1002, pname:'Rajiv', gender:'male', age:23 },
-    //   {id:1003, pname:'Maria', gender:'female', age:50 },
-    //   {id:1004, pname:'David', gender:'male', age:16 }
-    // ];
+
+  }
+
+  getAllCount(){
+    return this.personList.length;
+  }
+  getMaleCount(){
+    return this.personList.filter(x=>x.gender=='male').length;
+  }
+  getFemaleCount(){
+    return this.personList.filter(x=>x.gender=='female').length;
   }
 
   ngOnInit() {
