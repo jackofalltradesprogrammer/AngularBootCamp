@@ -1,6 +1,8 @@
 <div style="border:green 5px solid; width:750px">
-  <p>
-    parent works!
-  </p>
-  <app-child></app-child>
+  <h2>Parent Component</h2>
+  
+  <app-child [receivedDataFromParent] = 'getParentData()'>
+    
+  </app-child>
+
 </div>
