@@ -4,11 +4,12 @@ import {Input} from '@angular/core';
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
-  styleUrls: ['./child.component.css']
+  styleUrls: ['./child.component.css'],
+  inputs:['receivedDataFromParent']
 })
 export class ChildComponent implements OnInit {
 
-  @Input()
+  // @Input()
   receivedDataFromParent:string;
 
   constructor() { }
