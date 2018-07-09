@@ -1,5 +1,11 @@
 <div style="border:blue 5px solid; width:600px">
     <h3>People Count</h3>
-    All ({{allCount}}) Male({{maleCount}}) Female({{femaleCount}})
+    
+    <input type="radio" name="count" value="all" (change)='onChange()' [(ngModel)]='count'>
+      All ({{allCount}})
+    <input type="radio" name="count" value="male" (change)='onChange()' [(ngModel)]='count'>  
+      Male({{maleCount}}) 
+    <input type="radio" name="count" value="female" (change)='onChange()' [(ngModel)]='count'>    
+      Female({{femaleCount}})
   
   </div>

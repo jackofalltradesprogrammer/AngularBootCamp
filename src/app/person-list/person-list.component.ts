@@ -7,16 +7,16 @@ import { PersonList, IPerson } from './person';
   styleUrls: ['./person-list.component.css']
 })
 export class PersonListComponent implements OnInit {
-
+  gender:string="";
   personList: IPerson[];
   constructor() { 
     this.personList = new Array<IPerson> (
       {id:1001, pname:'Harpreet', gender:'male', age:28 },
       {id:1002, pname:'Rajiv', gender:'male', age:23 },
       {id:1003, pname:'Maria', gender:'female', age:50 },
-      {id:1004, pname:'David', gender:'male', age:16 }
+      {id:1004, pname:'David', gender:'male', age:16 },
+      {id:1005, pname:'Lupa', gender:'female', age:16 }
     );
-
   }
 
   getAllCount(){
@@ -27,6 +27,9 @@ export class PersonListComponent implements OnInit {
   }
   getFemaleCount(){
     return this.personList.filter(x=>x.gender=='female').length;
+  }
+  getCount(value){
+    this.gender=value;
   }
 
   ngOnInit() {
