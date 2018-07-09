@@ -14,12 +14,16 @@ export class ChildComponent implements OnInit {
   // @Input()
   receivedDataFromParent:string;
   childEvent1 = new EventEmitter<string>();
-  txt1:string="";
+  name1:string="";
+  terms:boolean;
 
   constructor() { }
 
   onChange(){
-    this.childEvent1.emit(this.txt1);
+    if (this.terms)
+      this.childEvent1.emit("Thank you " + this.name1 + " for accepting terms");
+    else
+      this.childEvent1.emit(this.name1 + " Read terms and accept it");
   }
 
   ngOnInit() {
