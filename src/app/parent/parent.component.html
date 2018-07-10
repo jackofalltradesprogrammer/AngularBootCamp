@@ -1,10 +1,12 @@
 <div style="border:green 5px solid; width:750px">
   <h2>Parent Component</h2>
   
+  Enter data: <input type="text" [(ngModel)]='txtParent'> <br>
+
   <app-child 
-    (childEvent1) ='getData($event)'
+      [parentData]='txtParent'
   >
     
   </app-child>
-    Message from Child: {{msg}}
+    
 </div>

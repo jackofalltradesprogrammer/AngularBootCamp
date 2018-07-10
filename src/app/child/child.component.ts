@@ -1,29 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import {Input} from '@angular/core';
 import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
-  styleUrls: ['./child.component.css'],
-  inputs:['receivedDataFromParent'],
-  outputs:['childEvent1']
+  styleUrls: ['./child.component.css']
 })
-export class ChildComponent implements OnInit {
+export class ChildComponent implements OnInit, OnChanges {
 
-  // @Input()
-  receivedDataFromParent:string;
-  childEvent1 = new EventEmitter<string>();
-  name1:string="";
-  terms:boolean;
+  @Input()
+  parentData:string;
+  
 
   constructor() { }
 
-  onChange(){
-    if (this.terms)
-      this.childEvent1.emit("Thank you " + this.name1 + " for accepting terms");
-    else
-      this.childEvent1.emit(this.name1 + " Read terms and accept it");
+  ngOnChanges(changes: SimpleChanges): void {
+    for (let i in changes){
+      let change = changes[i];
+      let current = JSON.stringify(change.currentValue);
+      let previous = JSON.stringify(change.currentValue);
+      console.log(`Property name : ${i}, current value: ${current}, previous value : ${previous}`);
+    }
   }
 
   ngOnInit() {

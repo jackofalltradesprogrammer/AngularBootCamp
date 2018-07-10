@@ -6,10 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements OnInit {
-  msg:string='';
-  getData(value){
-    this.msg = value;
-  }
+  txtParent:string='';
   
   constructor() { }
 
