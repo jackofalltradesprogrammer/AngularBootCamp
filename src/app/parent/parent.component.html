@@ -1,10 +1,12 @@
 <div style="border:green 5px solid; width:750px">
   <h2>Parent Component</h2>
   
-  Enter data: <input type="text" [(ngModel)]='txtParent'> <br>
+  Enter data1: <input type="text" [(ngModel)]='txtParent1'> <br>
+  Enter data2: <input type="text" [(ngModel)]='txtParent2'> <br>
 
   <app-child 
-      [parentData]='txtParent'
+      [parentData1]='txtParent1'
+      [parentData2]='txtParent2'
   >
     
   </app-child>

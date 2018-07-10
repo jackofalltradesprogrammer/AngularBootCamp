@@ -5,13 +5,14 @@ import { EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
-  styleUrls: ['./child.component.css']
+  styleUrls: ['./child.component.css'],
+  inputs: ['parentData1', 'parentData2']
 })
 export class ChildComponent implements OnInit, OnChanges {
 
-  @Input()
-  parentData:string;
   
+  parentData1:string;
+  parentData2:string;
 
   constructor() { }
 
@@ -19,7 +20,7 @@ export class ChildComponent implements OnInit, OnChanges {
     for (let i in changes){
       let change = changes[i];
       let current = JSON.stringify(change.currentValue);
-      let previous = JSON.stringify(change.currentValue);
+      let previous = JSON.stringify(change.previousValue);
       console.log(`Property name : ${i}, current value: ${current}, previous value : ${previous}`);
     }
   }
