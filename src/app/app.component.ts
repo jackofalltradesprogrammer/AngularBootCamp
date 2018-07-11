@@ -7,9 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  msg:string='';
-  onSubmit=function(){
-    this.msg = "Form Submitted Successfully";
+  msg1:string='';
+  msg2:string='';
+  onSubmit=function(obj){
+    this.msg1 = 'Name is ' +obj.name.value;
+    this.msg2= 'City is ' + obj.city.value;
   }
   
 }

@@ -3,7 +3,11 @@
 
   <!-- <app-person-list></app-person-list> -->
   <!-- <app-parent></app-parent> -->
-  <form (ngSubmit)='onSubmit()'>
-    <input type="submit" >
 
-  </form> <br> {{msg}}
+  <form #form1 (ngSubmit)='onSubmit(form1)'>
+    Enter Name: <input type="text" name="name" > <br>
+    Enter City: <input type="text" name="city" > <br>
+    <input type="submit" >
+  </form>
+  
+  <br> {{msg1}} <br> {{msg2}}
