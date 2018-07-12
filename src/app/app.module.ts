@@ -7,6 +7,7 @@ import { PersonListComponent } from './person-list/person-list.component';
 import { PersonCountComponent } from './person-count/person-count.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 
 
@@ -16,7 +17,8 @@ import { ChildComponent } from './child/child.component';
     PersonListComponent,
     PersonCountComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule, FormsModule
