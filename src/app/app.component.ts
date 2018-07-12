@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  titleStyle='BROWN';
+  titleStyle= {'color':'BROWN', 'text-align': 'center' };
   }
   
-}
+
 
