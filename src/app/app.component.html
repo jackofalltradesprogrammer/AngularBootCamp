@@ -1,8 +1,4 @@
-<h2>Conditional Styling </h2>
+<h2>Consume Service</h2>
 
-Enter Name: <input type="text" [(ngModel)]='name'><br>
-<input type= "checkbox"
-  [(ngModel)]="terms"
-  (change)='check()'>
-Terms and conditions <br>
-<p [ngStyle] ='termsStyle'> {{msg}}</p>
+<button (click)='getHelloMessageFromService()'>Consume Service</button> <br>
+{{msg}}
