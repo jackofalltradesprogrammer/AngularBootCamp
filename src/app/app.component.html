@@ -1,7 +1,12 @@
 <h1>Angular Pipes</h1>
 
-Enter name: <input type="text" [(ngModel)]='name'><br>
-{{"Given name is " + name}} <br>
-{{name|uppercase}} <br>
-{{name|lowercase}} <br>
-{{name|titlecase}} <br>
+Enter amount: <input type="number" [(ngModel)]='p'><br>
+Enter Time: <input type="number" [(ngModel)]='t'><br>
+Enter rate: <input type="number" [(ngModel)]='r'><br>
+
+<button (click)='getSimpleInterest()'>Calculate Interest</button><br>
+
+Amount with interest : {{si | number :'.2'}} <br>
+USA Currency Format : {{ si | currency:'USD':true}} <br>
+Indian Currency Format : {{ si | currency:'INR':true}} <br>
+British Currency Format : {{ si | currency:'GBP':true}} <br>
