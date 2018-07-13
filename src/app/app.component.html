@@ -1,3 +1,7 @@
-<h2>Consume Service</h2>
+<h1>Angular Pipes</h1>
 
-<app-employee></app-employee>
+Enter name: <input type="text" [(ngModel)]='name'><br>
+{{"Given name is " + name}} <br>
+{{name|uppercase}} <br>
+{{name|lowercase}} <br>
+{{name|titlecase}} <br>
