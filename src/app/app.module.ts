@@ -8,7 +8,7 @@ import { PersonCountComponent } from './person-count/person-count.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { EmployeeComponent } from './employee/employee.component';
-
+import {PrefixTitle} from './PrefixTitle.pipe';
 
 
 @NgModule({
@@ -18,7 +18,8 @@ import { EmployeeComponent } from './employee/employee.component';
     PersonCountComponent,
     ParentComponent,
     ChildComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    PrefixTitle
   ],
   imports: [
     BrowserModule, FormsModule
