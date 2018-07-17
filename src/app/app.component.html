@@ -1,5 +1,14 @@
 <h2>Template Driven Forms</h2>
 
+<table border="1">
+    <tr *ngFor = 'let e of employees'>
+        <td>{{e.id}}</td>
+        <td>{{e.ename}}</td>
+        <td>{{e.job}}</td>
+        <td>{{e.salary}}</td>
+    </tr>
+</table>
+
 <form #form1='ngForm' (ngSubmit) ='onSubmit(form1.value)'>
     Enter ID: <input type="number" name="id" ngModel> <br>
     Enter EName: <input type="text" name="ename" ngModel> <br>
