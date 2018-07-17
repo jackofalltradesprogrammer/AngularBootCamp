@@ -8,14 +8,21 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  employees=[
-    {id:1,ename:"Kiran", job:"Student", salary:"5000"},
-    {id:2,ename:"Happy", job:"Developer", salary:"5000"},
-    {id:3,ename:"Pawan", job:"Trainer", salary:"5000"},
-    {id:4,ename:"Misty", job:"Trainer", salary:"5000"},
-  ];
+  uname:string="happy";
+  pwd:string="happy";
+  msg:string="";
+  titleStyle:string="";
   onSubmit(obj){
-    this.employees.push(obj);
+    console.log(obj.txtPwd);
+    if(obj.txtUname == this.uname && obj.txtPwd == this.pwd){
+      this.msg = "User is Authenticated";
+      this.titleStyle="GREEN";
+    }
+    else {
+      this.msg = "User is not Authenticated";
+      this.titleStyle="RED";
+    }
+
   }
 }
   
