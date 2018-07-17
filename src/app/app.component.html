@@ -1,17 +1,10 @@
-<h1>List of Students</h1>
-<table border="1">
-    <tr>
-        <th>ID</th>
-        <th>Name of the Student</th>
-        <th>Course</th>
-        <th>Gender</th>
-        <th>Fee</th>
-    </tr>
-    <tr *ngFor="let s of students">
-        <td>{{s.id}}</td>
-        <td>{{s.sname | PrefixTitle:s.gender}}</td>
-        <td>{{s.course | lowercase}}</td>
-        <td>{{s.gender | lowercase}}</td>
-        <td>{{s.fee | currency:'USD':'$'}}</td>
-    </tr>
-</table>
+<h2>Template Driven Forms</h2>
+
+<form #form1='ngForm' (ngSubmit) ='onSubmit(form1.value)'>
+    Enter ID: <input type="number" name="id" ngModel> <br>
+    Enter EName: <input type="text" name="ename" ngModel> <br>
+    Enter Job: <input type="text" name="job" ngModel> <br>
+    Enter Salary: <input type="number" name="salary" ngModel> <br>
+
+    <input type="submit" name="b1" value="accept">
+</form> 
